@@ -1,0 +1,46 @@
+/* ------------------------- Index ------------------------- */
+
+/* Estilo de las categorias */
+.categorias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 1%;
+    margin-bottom: 1%;
+    padding: 10px;
+    background-color: #eaeae9ba;
+}
+
+/* Estilo de los filtros */
+@mixin font {
+    font-family: 'Nunito', sans-serif;
+}
+.tituloCategorias, .filtros {
+    @include font;
+}
+.tituloCategorias {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.filtros {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    font-weight: 300;
+    li {
+        width: max-content;
+        margin-bottom: 10px;
+    }
+}
+#formFiltros {
+    display: flex;
+    flex-direction: column;
+    @include font;
+}
+
+.filtroFecha {
+    input {
+        width: 100%;
+    }
+}

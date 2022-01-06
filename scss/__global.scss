@@ -1,0 +1,135 @@
+/* Limpiamos el formato que toma por defecto */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* ------------------------- General ------------------------- */
+$fontWeightGeneral: 300;
+$fontWeightParrafo: 400;
+$fontWeightTitulo: 600;
+
+@mixin fontFamily{
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Estilo del encabezado */
+header a:first-child {
+    width: min-content;
+}
+#logo {
+    min-width: 50px;
+    min-height: 50px;
+    width: 5%;
+    height: 5%;
+}
+#logo:hover {
+    transform: scale(1.2);
+    cursor: hand;
+}
+header, main{
+    display: flex;
+}
+header {
+    background-color: #45648c;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1%;
+}
+header a:first-child, .menuContainer {
+    margin: 1%;
+}
+.campanaNotificaciones {
+    cursor: pointer;
+    margin-right: 10px;
+}
+.menuContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.btnBusqueda {
+    color: white;
+    font-weight: 600;
+    background-color: #45648c;
+}
+.btnBusqueda:hover {
+    color: black;
+}
+.btnMenu {
+    color: white;
+    font-weight: 600;
+    background-color: #45648c;
+    border-color: #45648c;
+    box-shadow: none;
+}
+.btnMenu:hover, .btnMenu:focus {
+        color: white;
+        background-color: #45648c;
+        border-color: #45648c;
+        box-shadow: none;
+}
+ul, a{ 
+    list-style: none; 
+    text-decoration:none;
+    color: black;
+    @include fontFamily;
+    font-weight: $fontWeightGeneral;
+}
+
+
+/* Estilo de las publicaciones */
+.publicaciones:hover {
+    box-shadow: 0 3px 9px #324968, inset 0 0 9px white;  
+    cursor: pointer;
+}
+.publicaciones {
+    background-color: #eaeae9ba;
+    margin: auto 1% 1%;
+    padding: 5px;
+    border-color: #45648c;
+    border-width: 0.5px;
+    border-style: solid;
+    border-radius: 5px;
+    /* Fuente de los titulos */
+    h2 {
+        @include fontFamily;
+        font-weight: $fontWeightTitulo;
+    }
+}
+
+/* Fuente de los parrafos */
+.publicaciones p, #formBusqueda, .formContacto {
+    @include fontFamily;
+    font-weight: $fontWeightParrafo;
+}
+
+/* Fuente del pie de página */
+footer {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 0.5%;
+    @include fontFamily;
+    font-weight: $fontWeightGeneral;
+    background-color: #45648c;
+    div {
+        width: 33.33333333333333%;
+        ul{
+            padding-left: 0px;
+        }
+        p {
+            color: white;
+            text-align: center;
+            margin: 0;
+        }
+        a {
+            svg {
+                margin: 10px;
+            }
+        }
+        a:hover {
+            color: white;
+        }
+    }
+}

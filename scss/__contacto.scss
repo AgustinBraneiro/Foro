@@ -1,0 +1,27 @@
+/* ------------------------- Contacto ------------------------- */
+
+#tituloContacto {
+    font-size: 2em;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+}
+#formContacto {
+    display: flex;
+    flex-direction: column;
+    background-color: #eaeae9ba;
+    padding: 3%;
+    border: 1px solid #000;
+    border-radius: 5px;
+    min-width: 40%;
+    textarea {
+        resize: none
+    }
+}
+
+.mainContacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1%;
+}

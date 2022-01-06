@@ -1,0 +1,86 @@
+@mixin flexDirCol {
+    flex-direction: column;
+}
+
+@media screen and (max-width: 880px) {
+    /* --- Index --- */
+    main{
+        @include flexDirCol;
+    }
+    .categorias {
+        height: auto;
+        width: auto;
+        margin: auto 1% 1%;
+    }
+    .filtros, #formFiltros {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: end;
+    }
+    .btnFiltroFecha, .filtroFecha {
+        margin: 5px;
+    }
+    .btnFiltroFecha {
+        height: 28px;
+        width: 64px;
+    }
+    .filtros {
+        width: 100%;
+        margin-bottom: 0px;
+        div {
+            margin: 1%;
+        }
+    }
+
+    /* --- Cuenta --- */
+    #menuMisDatos {
+        height: auto;
+        width: auto;
+        margin: auto 1% 1%;
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            li {
+                margin: 10px;
+            }
+        }
+    }
+    .grid-container {
+        margin-left: 1%;
+    }
+}
+@media screen and (max-width: 580px) {
+    footer{
+        @include flexDirCol;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 480px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "item1"
+        "item2"
+        "item3"
+        "item4"
+        "item5"
+        "item6";
+    }
+}
+@media screen and (max-width: 400px) {
+    header {
+        @include flexDirCol;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 300px) {
+    #menuMisDatos {
+        ul {
+            @include flexDirCol;
+        }
+    }
+}
